@@ -1,0 +1,33 @@
+.about {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 40px;
+    margin: 40px auto;
+    max-width: 900px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.about h2 {
+    color: #5a3a31;
+    font-size: 32px;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.about p {
+    color: #6a4a41;
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.about i {
+    color: #8b5a4a;
+    font-size: 20px;
+    margin-top: 5px;
+}

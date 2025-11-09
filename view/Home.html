@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Home - Trend.co E-commerce Shop</title>
+    <link rel="stylesheet" href="styles/home.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Trend.Co</div>
+        
+        <nav id="navMenu">
+            <ul>
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="Shoop.html">Shop</a></li>
+                <li><a href="Blog.html">Blog</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+
+        <div class="right-section">
+            <div class="search-container">
+                <span class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></span>
+                <input type="text" placeholder="Search for products...">
+            </div>
+            <div class="cart"><i class="fa-solid fa-cart-shopping"></i></div>
+        </div>
+
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h2>Welcome to Trend.co</h2>
+            <p>Produk berkualitas, buatan tangan dengan penuh cinta.</p>
+            <button>Shop Now</button>
+        </section>
+
+        <section class="features">
+            <div class="feature">
+                <i class="fa-solid fa-magnifying-glass"></i> 
+                <h3>Pilihan Luas</h3>
+                <p>Jelajahi beragam produk dari berbagai kategori.</p>
+            </div>
+
+            <div class="feature">
+                <i class="fa-solid fa-tags"></i> 
+                <h3>Penawaran Eksklusif</h3>
+                <p>Dapatkan akses ke diskon dan promo spesial hanya untuk Anda.</p>
+            </div>
+
+            <div class="feature">
+                <i class="fa-solid fa-truck-fast"></i> 
+                <h3>Pengiriman Cepat</h3>
+                <p>Nikmati layanan pengiriman cepat dan terpercaya untuk setiap pesanan.</p>
+            </div>
+        </section>
+
+        <section class="categories">
+            <h2>Categories</h2>
+            <div class="category-list">
+                <div class="category">
+                    <i class="fa-solid fa-mobile-screen-button"></i>
+                    <h3>SmartPhones</h3>
+                </div>
+
+                <div class="category">
+                    <i class="fa-solid fa-headphones"></i>
+                    <h3>Headphones</h3>
+                </div>
+
+                <div class="category">
+                    <i class="fa-solid fa-camera"></i>
+                    <h3>Cameras</h3>
+                </div>
+
+                <div class="category">
+                    <i class="fa-solid fa-laptop"></i>
+                    <h3>Laptops</h3>
+                </div>
+
+                <div class="category">
+                    <i class="fa-solid fa-tablet-screen-button"></i>
+                    <h3>Tablets</h3>
+                </div>
+
+                <div class="category">
+                    <i class='bx bxs-watch'></i>
+                    <h3>Smartwatches</h3>
+                </div>
+            </div>
+        </section>
+
+        <section class="new-arrivals">
+            <h2>New Arrivals</h2>
+            <div class="new-arrivals-list">
+                <div class="product-card">
+                    <div class="image-container">
+                        <span class="discount-badge">-30%</span>
+                        <img src="images/product3.jpg" alt="Apple iPhone 14 Pro Max"> 
+                    </div>
+
+                    <div class="product-info">
+                        <h3>Apple iPhone 14 Pro Max</h3>
+                        <div class="price-rating">
+                            <p class="price">Rp 20.000.000</p>
+                            <div class="rating">
+                                <i class="fa-solid fa-star"></i> 4.5/5
+                            </div>
+                        </div>
+                        <div class="button-container">
+                            <button class="like" onclick="toggleLike(this)"><i class="bx bx-heart"></i></button>
+                            <button class="buy-btn">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="image-container">
+                        <span class="discount-badge">-30%</span>
+                        <img src="images/product3.jpg" alt="Samsung Galaxy S23 Ultra">
+                    </div>
+
+                    <div class="product-info">
+                        <h3>Samsung Galaxy S23 Ultra</h3>
+                        <div class="price-rating">
+                            <p class="price">Rp 20.000.000</p>
+                            <div class="rating">
+                                <i class="fa-solid fa-star"></i> 4.5/5
+                            </div>
+                        </div>
+                         <div class="button-container">
+                            <button class="like" onclick="toggleLike(this)"><i class="bx bx-heart"></i></button>
+                            <button class="buy-btn">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="image-container">
+                        <span class="discount-badge">-10%</span>
+                        <img src="images/Tablets.png" alt="Apple iPad Pro">
+                    </div>
+
+                    <div class="product-info">
+                        <h3>Apple iPad Pro M2 (2024)</h3>
+                        <div class="price-rating">
+                            <p class="price">Rp 15.000.000</p>
+                            <div class="rating">
+                                <i class="fa-solid fa-star"></i> 4.7/5
+                            </div>
+                        </div>
+                        <div class="button-container">
+                            <button class="like" onclick="toggleLike(this)"><i class="bx bx-heart"></i></button>
+                            <button class="buy-btn">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="image-container">
+                        <span class="discount-badge">-10%</span>
+                        <img src="images/Tablets.png" alt="Google Pixel Tablet">
+                    </div>
+
+                    <div class="product-info">
+                        <h3>Google Pixel Tablet</h3>
+                        <div class="price-rating">
+                            <p class="price">Rp 10.000.000</p>
+                            <div class="rating">
+                                <i class="fa-solid fa-star"></i> 4.5/5
+                            </div>
+                        </div>
+                        <div class="button-container">
+                            <button class="like" onclick="toggleLike(this)"><i class="bx bx-heart"></i></button>
+                            <button class="buy-btn">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="image-container">
+                        <span class="discount-badge">-25%</span>
+                        <img src="images/Smartphones.png" alt="Apple iPhone 13">
+                    </div>
+
+                    <div class="product-info">
+                        <h3>Apple iPhone 13</h3>
+                        <div class="price-rating">
+                            <p class="price">Rp 12.000.000</p>
+                            <div class="rating">
+                                <i class="fa-solid fa-star"></i> 4.5/5
+                            </div>
+                        </div>
+                        <div class="button-container">
+                            <button class="like" onclick="toggleLike(this)"><i class="bx bx-heart"></i></button>
+                            <button class="buy-btn">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="discounts">
+            <div class="discount-1">
+                <img src="images/uu.jpg" alt="Diskon Musim Panas">
+                <h3><i class="fa-solid fa-sun"></i> Diskon Musim Panas - Hingga 50%!</h3>
+                <p>Jangan lewatkan promo terbesar kami musim ini. Belanja dan dapatkan diskon besar untuk semua kategori produk.</p>
+                <button><i class="fa-solid fa-cart-shopping"></i> Belanja Sekarang</button>
+            </div>
+
+            <div class="discount-2">
+                <div class="discount">
+                    <img src="images/discount-2.jpg" alt="Beli Satu Gratis Satu">
+                    <h3><i class="fa-solid fa-gift"></i> Beli 1 Gratis 1</h3>
+                    <p>Penawaran eksklusif untuk produk-produk pilihan di kategori Fashion dan Aksesori.</p>
+                    <button><i class="fa-solid fa-bag-shopping"></i> Belanja Sekarang</button>
+                </div>
+
+                <div class="discount">
+                    <img src="images/discount-3.jpg" alt="Gratis Ongkir">
+                    <h3><i class="fa-solid fa-truck-fast"></i> Gratis Ongkir untuk Pembelian di Atas Rp750.000</h3>
+                    <p>Belanja lebih banyak, hemat biaya pengiriman, berlaku untuk seluruh wilayah Indonesia!</p>
+                    <button><i class="fa-solid fa-arrow-right"></i> Belanja Sekarang</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials">
+            <h2>Testimonials</h2>
+            <div class="testimonials-list">
+                <div class="testimonial">
+                    <p>"Layanan pelanggan yang luar biasa dan produk berkualitas tinggi. Saya sangat puas dengan pembelian saya di Trend.co!"</p>
+                    <h4><i class="fa-solid fa-user"></i> Alex M.</h4>
+                </div>
+                <div class="testimonial">
+                    <p>"Produk-produk yang bagus dan pengiriman sangat cepat! Desainnya modern dan harga terjangkau. Sangat merekomendasikan Trend.co."</p>
+                    <h4><i class="fa-solid fa-user"></i> Jane D.</h4>
+                </div>
+
+                <div class="testimonial">
+                    <p>"Penawaran yang luar biasa dan layanan pelanggan yang sangat baik. Semua barang yang saya beli sesuai deskripsi."</p>
+                    <h4><i class="fa-solid fa-user"></i> John S.</h4>
+                </div>
+
+                <div class="testimonial">
+                    <p>"Saya suka berbagai macam produk yang tersedia. Selalu menemukan apa yang saya butuhkan dengan mudah!"</p>
+                    <h4><i class="fa-solid fa-user"></i> Sarah W.</h4>
+                </div>
+            </div>
+        </section>
+
+        <section class="blog-highlights">
+            <h2>From Our Blog</h2>
+            <div class="blog-highlights-list">
+                <div class="blog-post">
+                    <div class="image-container">
+                        <p class="category-blog">Fashion</p>
+                        <img src="images/Fashion.jpg" alt="Fashion Blog">
+                    </div>
+                    <div class="blog-text">
+                        <h3>10 Trend Fashion Musim Panas Teratas 2024</h3>
+                        <p>Tetap stylish musim ini dengan pilihan terbaik kami. Baca tips dari para ahli fashion.</p>
+                        <a href="blog-detail.html">Read More</a>
+                    </div>
+                </div>
+
+                <div class="blog-post">
+                    <div class="image-container">
+                        <p class="category-blog">Technology</p>
+                        <img src="images/Technology.jpg" alt="Technology Blog">
+                    </div>
+                    <div class="blog-text">
+                        <h3>Ulasan Gadget Terbaru: Apa yang Sedang Tren di Dunia Teknologi</h3>
+                        <p>Dapatkan wawasan terbaru tentang gadget-gadget terbaru yang wajib Anda miliki.</p>
+                        <a href="blog-detail.html">Read More</a>
+                    </div>
+                </div>
+
+                <div class="blog-post">
+                    <div class="image-container">
+                        <p class="category-blog">Electronics</p>
+                        <img src="images/Electronics.jpg" alt="Electronics Blog">
+                    </div>
+                    <div class="blog-text">
+                        <h3>Ide Dekorasi Rumah & Elektronik untuk Setiap Musim</h3>
+                        <p>Ubah ruang hidupmu dengan kombinasi dekorasi dan perangkat elektronik terkini dan modern.</p>
+                        <a href="blog-detail.html">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        
+        <section class="subscribe-newsletter">
+            <h2>Subscribe to Our Newsletter</h2>
+            <p>Stay updated with the latest trends and exclusive offers.</p>
+            <div>
+                <input type="email" placeholder="Enter your email">
+                <button type="submit">Subscribe</button>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h3>About Trend.co</h3>
+                <p>Trend.co is your go-to online shop for the latest trends in fashion, electronics, and more. We are committed to providing high-quality products and exceptional customer service.</p>
+            </div>
+
+            <div class="footer-section links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="Home.html">Home</a></li>
+                    <li><a href="Shop.html">Shop</a></li>
+                    <li><a href="Blog.html">Blog</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section social">
+                <h3>Follow Us</h3>
+                <p>Stay connected with us on social media:</p>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-section contact">
+                <h3>Contact Us</h3>
+                <p><i class="fa-solid fa-phone"></i> +1 234 567 890</p>
+                <p><i class="fa-solid fa-envelope"></i> info@trend.co</p>
+            </div>
+        </div>  
+        <p>&copy; 2025 Trend.co. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const nav = document.getElementById('navMenu');
+            nav.classList.toggle('active');
+        }
+
+        function toggleLike(button) {
+            button.classList.toggle('liked');
+            const icon = button.querySelector('i');
+            if (button.classList.contains('liked')) {
+                icon.className = 'bx bxs-heart';
+            } else {
+                icon.className = 'bx bx-heart';
+            }
+        }
+    </script>
+</body>
+</html>
