@@ -1,2 +1,2 @@
-# FP_Dicoding
+# Trend.Co
 FP_Dicoding
