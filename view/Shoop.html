@@ -12,20 +12,26 @@
     <header>
         <div class="logo">Trend.Co</div>
         
-        <nav>
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <nav id="navMenu">
             <ul>
                 <li><a href="Home.html">Home</a></li>
-                <li><a href="Shoop.html">Shoop</a></li>
+                <li><a href="Shoop.html">Shop</a></li>
                 <li><a href="Blog.html">Blog</a></li>
-                <li><a href="About.html">About Us</a></li>
-                <li><a href="Contact.html">Contact Us</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact Us</a></li>
             </ul>
         </nav>
 
         <div class="right-section">
             <div class="search-container">
                 <span class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></span>
-                <input type="text" placeholder="Search for products...">
+                <input type="text" placeholder="Search products...">
             </div>
             <div class="cart"><i class="fa-solid fa-cart-shopping"></i></div>
         </div>
@@ -34,12 +40,12 @@
     <main>
         <section class="shoop">
             <div class="container">
-                <h2>Welcome to Our Shop</h2>
+                <h1>Welcome to Our Shop</h1>
                 <p>Discover a wide range of products tailored to your needs. Shop now and enjoy exclusive deals and offers!</p>
             </div>
 
-            <div class="product-container">
-                <div class="product-card">
+            <div class="product-container" >
+                <div class="product-card" data-category="Smartphones" data-price="20000000">
                     <div class="image-container">
                         <i class="bx bx-heart"></i>
                         <img src="images/Apple_iPhone_14_Pro_Max.png" alt="Apple iPhone 14 Pro Max">
@@ -56,8 +62,8 @@
                     </div>
                 </div>
 
-                <div class="product-card">
-                    <div class="image-container">
+                <div class="product-card" data-category="Smartphones" data-price="20000000">
+                    <div class="image-container" >
                         <i class="bx bx-heart"></i>
                         <img src="images/Apple_iPhone_14_Pro_Max.png" alt="Apple iPhone 14 Pro Max">
                     </div>
@@ -73,7 +79,7 @@
                     </div>
                 </div>
 
-                <div class="product-card">
+                <div class="product-card" data-category="Tablets" data-price="15000000">
                     <div class="image-container">
                         <i class="bx bx-heart"></i>
                         <img src="images/Tablets.png" alt="Apple iPad Pro">
@@ -90,7 +96,7 @@
                     </div>
                 </div>
                 
-                <div class="product-card">
+                <div class="product-card" data-category="Tablets" data-price="20000000">
                     <div class="image-container">
                         <i class="bx bx-heart"></i>
                         <img src="images/Tablets.png" alt="Apple iPad Pro">
@@ -107,7 +113,7 @@
                     </div>
                 </div>
 
-                <div class="product-card">
+                <div class="product-card" data-category="Smartphones" data-price="20000000">
                     <div class="image-container">
                         <i class="bx bx-heart"></i>
                         <img src="images/Smartphones.png" alt="Apple iPhone 13">
@@ -124,7 +130,7 @@
                     </div>
                 </div>
 
-                <div class="product-card">
+                <div class="product-card" data-category="Smartphones" data-price="20000000">
                     <div class="image-container">
                         <i class="bx bx-heart"></i>
                         <img src="images/Smartphones.png" alt="Apple iPhone 13">
@@ -170,18 +176,65 @@
                     <li><a href="#">Above Rp 20.000.000</a></li>
                 </ul>
             </div>
+            <div class="sidebar-section">
+                <h3>Best Sellers</h3>
+                <ul>
+                    <li><a href="#">Apple iPhone 14 Pro Max</a></li>
+                    <li><a href="#">Samsung Galaxy S23 Ultra</a></li>
+                    <li><a href="#">Apple iPad Pro</a></li>
+                    <li><a href="#">Dell XPS 13 Laptop</a></li>
+                </ul>
+            </div>
         </aside>
     </main>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h3>About Trend.co</h3>
+                <p>Trend.co is your go-to online shop for the latest trends in fashion, electronics, and more. We are committed to providing high-quality products and exceptional customer service.</p>
+            </div>
+
+            <div class="footer-section links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="Home.html">Home</a></li>
+                    <li><a href="Shop.html">Shop</a></li>
+                    <li><a href="Blog.html">Blog</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section social">
+                <h3>Follow Us</h3>
+                <p>Stay connected with us on social media:</p>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-section contact">
+                <h3>Contact Us</h3>
+                <p><i class="fa-solid fa-phone"></i>+62 234 567 89</p>
+                <p><i class="fa-solid fa-envelope"></i>trend@gmail.com</p>
+            </div>
+        </div>  
+        <p>&copy; 2025 Trend.co. All rights reserved.</p>
+    </footer>
+    
 
     <script>
+        function toggleMenu() {
+            const nav = document.getElementById('navMenu');
+            nav.classList.toggle('active');
+        }
+
         document.querySelectorAll('.bx-heart').forEach(heart => {
             heart.addEventListener('click', function(e) {
                 e.preventDefault();
-                if (this.classList.contains('bx-heart')) {
-                    this.classList.replace('bx-heart', 'bxs-heart');
-                } else {
-                    this.classList.replace('bxs-heart', 'bx-heart');
-                }
+                this.classList.toggle('bxs-heart');
             });
         });
 
@@ -192,6 +245,48 @@
             });
         });
 
+        const productCards = document.querySelectorAll('.product-card');
+
+        document.querySelectorAll('.sidebar-section ul li a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const text = this.textContent.trim();
+
+                if (["Smartphones", "Tablets", "Laptops", "Accessories"].includes(text)) {
+                    filterProductsByCategory(text);
+                }
+
+                else if (text.includes("Rp") || text.includes("Under")) {
+                    filterProductsByPrice(text);
+                }
+            });
+        });
+
+        function filterProductsByCategory(category) {
+            productCards.forEach(card => {
+                const cardCategory = card.getAttribute('data-category');
+                card.style.display = (cardCategory === category) ? 'block' : 'none';
+            });
+        }
+
+        function filterProductsByPrice(filterText) {
+            productCards.forEach(card => {
+                const price = parseInt(card.getAttribute('data-price'));
+
+                if (filterText.includes("Under")) {
+                    card.style.display = price < 5000000 ? 'block' : 'none';
+                } else if (filterText.includes("Rp 5.000.000 - Rp 10.000.000")) {
+                    card.style.display = (price >= 5000000 && price <= 10000000) ? 'block' : 'none';
+                } else if (filterText.includes("Rp 10.000.000 - Rp 20.000.000")) {
+                    card.style.display = (price > 10000000 && price <= 20000000) ? 'block' : 'none';
+                } else if (filterText.includes("Above")) {
+                    card.style.display = price > 20000000 ? 'block' : 'none';
+                }
+            });
+        }
+
+
     </script>
 </body>
 </html>
+

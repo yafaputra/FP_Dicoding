@@ -102,33 +102,33 @@ nav a:hover {
 
 main {
     display: flex;
-    margin: 0 auto;
-    gap: 30px;
-    padding: 20px;
-    margin: 30px;
+    justify-content: center;
+    gap: 40px;
+    padding: 40px 60px;
+    flex-wrap: wrap;
 }
 
 .shoop {
-    flex: 1;
+    flex: 1 1 700px;
 }
 
 .container {
-    border-left: 5px solid #5a3a31;
+    background-color: #fff;
     padding: 30px;
-    border-radius: 15px;
+    border-left: 5px solid #5a3a31;
+    border-radius: 8px;
     margin-bottom: 30px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
 }
 
-.container h2 {
+.container h1 {
     color: #5a3a31;
-    font-size: 32px;
+    margin-bottom: 10px;
 }
 
 .container p {
-    color: #6a4a41;
-    font-size: 16px;
-    line-height: 1.6;
+    color: #555;
+    font-size: 14px;
 }
 
 .product-container {
@@ -140,12 +140,12 @@ main {
 
 .product-card {
     background-color: #fff;
-    border-radius: 15px;
+    border-radius: 10px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
-    border: #5a3a31 2px solid;
+    border: #d4b5b0 2px solid;
 }
 
 .product-card:hover {
@@ -160,7 +160,7 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #574949; 
+    background-color: #bab1af; 
     border-top-left-radius: 10px;
     overflow: hidden;
     margin-bottom: 15px;
@@ -261,7 +261,7 @@ main {
     color: #fff;
     border: none;
     padding: 12px 20px;
-    border-radius: 8px;
+    border-radius: 5px;
     cursor: pointer;
     transition: all 0.3s;
     width: 88%;
@@ -273,8 +273,6 @@ main {
 
 .buy-btn:hover {
     background: linear-gradient(135deg, #7a4a3a 0%, #6a3a2a 100%);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(139, 90, 74, 0.3);
 }
 
 .buy-btn:active {
@@ -285,36 +283,36 @@ main {
     display: flex;
     justify-content: center;
     gap: 10px;
-    padding: 20px 0;
+    margin-top: 25px;
 }
 
 .pagination a {
-    color: #5a3a31;
-    padding: 10px 15px;
     text-decoration: none;
-    border: 2px solid #d4b5b0;
-    border-radius: 8px;
-    transition: all 0.3s;
-    font-weight: 600;
+    color: #5a3a31;
+    padding: 8px 14px;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    transition: 0.3s;
 }
 
-.pagination a:hover,
-.pagination a.active {
-    background-color: #8b5a4a;
+.pagination a.active,
+.pagination a:hover {
+    background-color: #5a3a31;
     color: #fff;
-    border-color: #8b5a4a;
 }
+
 
 .sidebar {
     background-color: #fff;
-    padding: 30px;
-    border-radius: 15px;
+    padding: 20px;
+    border-radius: 5px;
     width: 300px;
     height: fit-content;
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-    position: sticky;
-    top: 100px;
+    border: #d4b5b0 3px solid;
 }
+
 
 .sidebar-section {
     margin-bottom: 30px;
@@ -346,53 +344,181 @@ main {
     color: #5a3a31;
     transition: all 0.3s;
     display: block;
-    padding: 8px 12px;
     border-radius: 6px;
     font-size: 15px;
 }
 
 .sidebar-section a:hover {
-    color: #fff;
-    background-color: #8b5a4a;
-    padding-left: 20px;
+    color: #8b5a4a;
+}
+footer {
+    background-color: #5a3a31;
+    color: #f5f5f5;
+    padding: 40px 40px 20px;
+    text-align: center;
 }
 
-@media (max-width: 1200px) {
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-bottom: 30px;
+    text-align: left;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer-section h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #d4b5b0;
+}
+
+.footer-section p,
+.footer-section ul {
+    font-size: 14px;
+    color: #ccc;
+    line-height: 1.6;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section ul li a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s;
+    display: block;
+    padding: 3px 0;
+}
+
+.footer-section ul li a:hover {
+    color: #d4b5b0;
+}
+
+.footer-section.social .social-icons {
+    margin-top: 15px;
+}
+
+.social-icons a {
+    color: #f5f5f5;
+    font-size: 20px;
+    margin-right: 15px;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #d4b5b0;
+}
+
+.footer-section.contact p {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+footer > p {
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 14px;
+    color: #aaa;
+    text-align: center;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background-color: #5a3a31;
+    transition: 0.3s;
+}
+
+
+@media (max-width: 992px) {
+
+
     main {
         flex-direction: column;
+        align-items: center;
+        padding: 20px;
     }
 
     .sidebar {
         width: 100%;
-        position: static;
+        order: 2;
+    }
+
+    .blog {
+        order: 1;
+        width: 100%;
     }
 }
 
 @media (max-width: 768px) {
     header {
-        flex-direction: column;
-        gap: 20px;
+        padding: 15px 20px;
+        flex-wrap: wrap;
+    }
+
+    .menu-toggle {
+        display: flex;
+        order: 3;
+    }
+
+    header > nav {
+        order: 4;
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+    }
+
+    nav.active {
+        max-height: 300px;
     }
 
     nav ul {
-        gap: 15px;
-        flex-wrap: wrap;
-        justify-content: center;
+        flex-direction: column;
+        gap: 10px;
+        padding: 20px 0;
+    }
+
+    .right-section {
+        order: 2;
+        gap: 10px;
     }
 
     .search-container input[type="text"] {
-        width: 250px;
-    }
-    .search-container input[type="text"]::placeholder {
-        color: #999;
+        width: 190px;
     }
 
     .search-container input[type="text"]:focus {
-        display: none;
+        width: 190px;
     }
-        .product-container {
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+   
+    footer {
+        padding: 30px 20px 15px;
     }
 }
 
 
+@media (max-width: 480px) {
+    .logo {
+        font-size: 20px;
+    }
+
+    .search-container input[type="text"] {
+        width: 150px;
+        font-size: 12px;
+    }
+}
